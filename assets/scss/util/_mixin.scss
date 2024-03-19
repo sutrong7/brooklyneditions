@@ -1,0 +1,50 @@
+$pc:1600px;
+// 1025
+
+$landscape:991px;
+// 768 
+
+$portrait:767px;
+// 360
+
+$mobile:479px;
+
+@mixin pc(){
+    @media (min-width:$pc) {
+        @content;
+    }
+}
+
+
+@mixin landscape(){
+    @media (max-width:$landscape) {
+        @content;
+    }
+}
+
+
+@mixin portrait(){
+    @media (max-width:$portrait) {
+        @content;
+    }
+}
+
+
+
+@mixin mobile(){
+    @media (max-width:$mobile) {
+        @content;
+    }
+}
+
+@mixin ellipsis($line:1){
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @if($line > 1){
+        display: -webkit-box;
+        -webkit-line-clamp: $line;
+        -webkit-box-orient: vertical;
+    }@else{
+        white-space: nowrap;       
+    }
+}

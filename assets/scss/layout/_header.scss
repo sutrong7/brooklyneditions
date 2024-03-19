@@ -1,0 +1,87 @@
+/*
+    HEADER
+*/
+
+.header {
+  position: absolute;
+  z-index: 3;
+
+  /* display: none; */
+  .logo {
+    width: 13.5em;
+    // max-width: 240px;
+    min-width: 180px;
+    transition: none;
+    position: absolute;
+    top: 4vw;
+    bottom: auto;
+    left: 4vw;
+    right: auto;
+    visibility: hidden;
+
+    @include landscape {
+      width: 176px;
+      min-width: auto;
+    }
+
+    @include portrait {
+      width: 156px;
+      min-width: auto;
+      padding-left: 10px;
+    }
+
+    @include mobile {
+      width: 144px;
+    }
+  }
+
+  .btn-menu {
+    display: block;
+    z-index: 9999;
+    background-color: #f2f2ea;
+    border-radius: 8px;
+    margin-top: 2vw;
+    padding: 20px 18px 0;
+    padding-top: 17px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: fixed;
+    right: 10px;
+    transition: opacity 0.3s;
+    box-shadow: 0 0 30px rgba(132, 132, 132, 0.13);
+
+
+    @include landscape{
+        padding-top: 18px;
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+    @include portrait{
+        background-color: #f2f2ea;
+        margin-top: 3vw;
+        // padding-left: 0;
+        // padding-right: 0;
+    }
+    @include mobile{
+        padding-top: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
+        right: 4vw;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  .ico-menu {    
+    span {
+      display: block;
+      width: 2.4em;
+      border-bottom: 2px solid #221f20;
+      margin-bottom: 0.75em;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

@@ -1,0 +1,385 @@
+/*
+    FOOTER
+*/
+.footer {
+  /* display: none; */
+  position: relative;
+  background-color: #e3e4d1;
+  overflow: hidden;
+
+  .footer-wrap {
+    position: relative;
+    padding-top: 7em;
+    padding-bottom: 7em;
+
+    @include landscape {
+      padding-top: 5.6em;
+      padding-bottom: 5.6em;
+    }
+    @include portrait {
+      padding-top: 3em;
+      padding-bottom: 3em;
+    }
+
+    .container {
+      @include mobile{
+        max-width: 100%;
+        padding: 0 16px;
+      }
+    }
+
+    .footer-bkx-mark {
+      pointer-events: none;
+      width: 76vw;
+      height: auto;
+      opacity: 0.4;
+      position: absolute;
+      top: auto;
+      bottom: 0%;
+      left: auto;
+      right: 0%;
+
+      @include landscape {
+        width: 84vw;
+      }
+
+      @include portrait {
+        z-index: 1;
+        width: 80%;
+      }
+
+      @include mobile {
+        width: 90%;
+      }
+    }
+
+    .footer-contact-list {
+      grid-column-gap: 24px;
+      grid-row-gap: 24px;
+      display: flex;
+      position: relative;
+
+      @include landscape {
+        flex-direction: column;
+      }
+      @include portrait {
+        grid-column-gap: 28px;
+      }
+      @include mobile {
+        grid-column-gap: 16px;
+        grid-row-gap: 16px;
+      }
+
+      .footer-contact-item {
+        border-top: 4px solid #221f20;
+        flex: 1;
+        padding-top: 1.2em;
+
+        @include landscape {
+          border-top-width: 4px;
+        }
+
+        @include portrait {
+          border-top-width: 3px;
+          padding-top: 24px;
+        }
+
+        @include mobile {
+          padding-top: 16px;
+        }
+
+        .footer-contact-link {
+          grid-column-gap: 0.8em;
+          grid-row-gap: 0.8em;
+          align-items: center;
+          font-size: 1.2em;
+          font-weight: 700;
+          text-decoration: none;
+          transition: opacity 0.3s;
+          display: flex;
+          font-size: 1.2em;
+          font-weight: 700;
+
+          .ico {
+            width: 1.3em;
+            height: 1.45em;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+
+    .footer-link-wrap {
+      padding-top: 8em;
+
+      @include landscape {
+        padding-top: 5.6em;
+      }
+      @include portrait {
+        padding-top: 28px;
+      }
+
+      .footer-flex-wrap {
+        display: flex;
+        grid-column-gap: 5vw;
+        grid-row-gap: 5vw;
+
+        .nav-link-wrapper {
+          margin-bottom: 30.5em;
+          grid-column-gap: 2.5vw;
+          grid-row-gap: 2.5vw;
+          flex: 1;
+          grid-template-rows: auto;
+          grid-template-columns: max-content 1fr 1fr 1fr;
+          grid-auto-columns: 1fr;
+          justify-content: space-between;
+          display: grid;
+
+          @include landscape {
+            grid-column-gap: 32px;
+            grid-row-gap: 32px;
+            grid-template-columns: 1fr 1fr 1fr;
+            margin-bottom: 20em;
+          }
+
+          @include portrait {
+            grid-column-gap: 28px;
+            grid-row-gap: 28px;
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: 12em;
+          }
+
+          @include mobile {
+            grid-template-columns: 1fr;
+          }
+
+          .logo-column {
+            @include landscape {
+              grid-area: span 1 / span 3 / span 1 / span 3;
+            }
+
+            @include portrait {
+              grid-column: span 2 / span 2;
+            }
+
+            @include mobile {
+              grid-column: span 1 / span 1;
+            }
+
+            .footer-logo {
+              display: block;
+              padding-right: 5vw;
+
+              .footer-logo-img {
+                width: 12.4em;
+                @include landscape {
+                  width: 200px;
+                }
+
+                @include portrait {
+                  width: 180px;
+                }
+
+                @include mobile {
+                  width: 160px;
+                  margin-bottom: 16px;
+                }
+              }
+            }
+
+            .sns-list {
+              display: flex;
+              grid-column-gap: 1.6em;
+              grid-row-gap: 1.6em;
+              margin-top: 6em;
+
+              @include landscape {
+                margin-top: 4em;
+              }
+
+              @include portrait {
+                margin-top: 28px;
+              }
+
+              .sns-item {
+                width: 2.5em;
+                transition: opacity 0.3s;
+
+                @include landscape {
+                  width: 2.2em;
+                }
+
+                @include portrait {
+                  width: 2em;
+                }
+
+                &:hover {
+                  opacity: 0.8;
+                }
+
+                .ico-sns {
+                  width: 100%;
+                }
+              }
+            }
+          }
+          .link-column {
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            align-items: flex-start;
+
+            .footer-nav-header {
+              margin-bottom: 0.7em;
+              font-size: 1.32em;
+              font-weight: 700;
+
+              @include landscape {
+                font-size: 1.28em;
+              }
+
+              @include portrait {
+                margin-top: 0.7em;
+                font-size: 1.18em;
+              }
+
+              .hover-link {
+                transition: opacity 0.3s;
+
+                &:hover {
+                  opacity: 0.8;
+                }
+              }
+            }
+
+            .footer-nav-link {
+              margin-bottom: 5px;
+              padding-top: 5px;
+              padding-bottom: 5px;
+              font-size: 1.15em;
+              font-weight: 500;
+              text-decoration: none;
+              display: inline-block;
+
+              @include landscape {
+                padding-top: 4px;
+                padding-bottom: 4px;
+              }
+
+              @include portrait {
+                font-size: 1.12em;
+              }
+
+              @include mobile{
+                margin-bottom: 3px;
+                padding-top: 4px;
+                padding-bottom: 4px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .payment-wrap {
+      display: flex;
+      margin-top: 8em;
+      flex-wrap: wrap;
+      width: 100%;
+      grid-column-gap: 1em;
+      grid-row-gap: 1em;
+      opacity: 0.8;
+      margin-top: 2em;
+
+      @include portrait {
+        margin-top: 4em;
+      }
+
+      @include mobile{
+        margin-top: 28px;
+      }
+
+      .ico-payment {
+        height: 2.2em;
+        max-width: 50%;
+        // filter: grayscale();
+        object-fit: contain;
+        align-self: center;
+
+        @include landscape{
+          height: 2.2em;
+          max-width: 70%;
+        }
+
+        @include portrait{
+          max-width: 60%;
+        }
+
+        @include mobile{
+          max-width: 55%;
+        }
+      }
+    }
+
+    .paperlogos-wrap {
+      @include portrait {
+        margin-top: 4em;
+      }
+
+      .footer-paperlogo-img {
+        width: 13.2em;
+        max-width: none;
+        // filter: grayscale();
+        mix-blend-mode: darken;
+        object-fit: contain;
+      }
+    }
+
+    .policy-wrap {
+      margin-top: 3em;
+
+      @include landscape {
+        margin-top: 2.25em;
+      }
+
+      @include portrait {
+        margin-top: 28px;
+      }
+
+      .policy-link {
+        display: block;
+        margin-bottom: 5px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 1.15em;
+        font-weight: 500;
+        text-decoration: none;
+        opacity: 0.6;
+
+        @include landscape {
+          padding-top: 4px;
+          padding-bottom: 4px;
+        }
+
+        @include portrait {
+          font-size: 1.12em;
+          display: block;
+        }
+      }
+    }
+  }
+
+  .footer-copyright-link {
+    display: block;
+    z-index: 10;
+    font-size: 0.9em;
+    position: absolute;
+    bottom: 2em;
+    left: 2em;
+    opacity: 0.6;
+
+    @include portrait {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,181 @@
+/*
+    LAYOUTS
+*/
+
+.container {
+  max-width: 92%;
+  min-height: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+
+  @include mobile{
+    max-width: 100%;
+    padding: 0 16px;
+  }
+}
+
+.container.full-width {
+  max-width: none;
+}
+
+.container.full-width.full-height {
+  height: 100vh;
+}
+
+.container.stretch {
+  height: 100%;
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 16px;
+  display: flex;
+  overflow: hidden;
+}
+
+/*
+    ASSETS
+*/
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  margin: -1px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+.huge-header {
+  letter-spacing: 0.025em;
+  margin-top: 0;
+  margin-left: -5px;
+  font-family: Inter, sans-serif;
+  font-size: 9.4vw;
+  font-weight: 500;
+  line-height: 0.88;
+}
+
+.medium-header {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 3.25em;
+  font-weight: 300;
+  line-height: 0.96;
+  letter-spacing: -0.04em;
+}
+
+.paragraph {
+  font-size: 1.12em;
+  line-height: 1.5;
+
+ @include landscape{
+    font-size: 1.08em;
+    line-height: 1.4;
+ }
+ @include portrait{
+    margin-bottom: 0;
+    font-size: 1.04em;
+    line-height: 1.32;
+ }
+}
+
+h3 {
+  @include portrait {
+    font-size: 40px;
+  }
+}
+
+.num-box {
+  letter-spacing: 0.08em;
+  font-size: 2.32em;
+  font-weight: 600;
+  line-height: 1.2;
+  display: inline-block;
+
+  @include landscape{
+    font-size: 30px;
+  }
+  @include portrait {
+    font-size: 24px;
+    line-height: 1.1;
+  }
+  @include mobile{
+    font-size: 27px;
+  }
+}
+
+.img-wrap .absolute {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+.img-wrap .img-credits.lt {
+  left: 0%;
+}
+
+
+.img-credits {
+    position: absolute;
+    bottom: 0;
+    backdrop-filter: blur(5px);
+    background-color: #fff;
+    padding: 15px 15px 12px 22px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.45);
+    font-style: italic;
+    line-height: 1.15;
+}
+/**
+    BUTTON
+  */
+
+.btn-shade.btn-wrap {
+  color: #171616;
+  background-color: #e3e4d1;
+  padding: 0.8em 2.5em 0.8em 3em;
+  text-decoration: underline;
+  transition: background-color 0.3s, color 0.3s;
+  bottom: 6.67vw;
+  left: -3vw;
+  position: relative;
+  top: 10vw;
+  font-size: 1.4em;
+  cursor: pointer;
+}
+
+.btn-shade .link-more {
+  /* position: absolute; */
+  text-align-last: left;
+  background-color: transparent;
+  /* padding: 0.8em 2.5em 0.8em 3em; */
+  padding-left: 0;
+  text-decoration: underline;
+  transition: letter-spacing 0.25s;
+  display: block;
+  /* position: absolute; */
+}
+
+.btn-shade.link-more strong {
+  font-weight: 700;
+}
+
+.btn-shade.btn-wrap:hover {
+  color: #f2f2eb;
+  background-color: #221f20;
+}
