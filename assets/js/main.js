@@ -94,40 +94,27 @@ mm.add('(min-width:479px)', () => {
   })
 })
 
+let serviceslide = document.querySelectorAll('.services-item.absolute');
 mm.add('(max-width:478px)', () => {
   pinSection = gsap.timeline({
     scrollTrigger: {
       trigger: '.sc-services',
-      start: 'top top',
-      end: '+=600%',
-      // markers: true,
-      scrub: 1.2,
-      // pin: true,
+      // pin:true,
+        scrub:1,
+        start:'top top',
+      end: '+=200%',
+      
+        // refreshPriority:8
     },
   })
+
   pinSection
-    .to({}, { duration: 0.15 })
-    .from(serviceList, { autoAlpha: 0, duration: 0.5, stagger: 1.15 })
-    .to(
-      '.services-item.absolute .header-line',
-      { scaleX: 0.22, duration: 0.5, stagger: 1.15 },
-      0.35,
-    )
-    .from(
-      '.services-item.absolute h3',
-      { yPercent: 20, autoAlpha: 0, duration: 0.5, stagger: 1.15 },
-      0.35,
-    )
-    .from(
-      '.services-item.absolute p',
-      { yPercent: 20, autoAlpha: 0, duration: 0.5, stagger: 1.15 },
-      0.4,
-    )
-    .from(
-      '.services-item.absolute .img-museumquality',
-      { yPercent: 20, autoAlpha: 0, duration: 0.5, stagger: 1.15 },
-      0.45,
-    )
+    .to({}, { duration: 0.15})
+    .from(serviceslide, { autoAlpha: 0, duration: 0.32, stagger: 1.15 })
+    .to('.services-item .header-line', { scaleX: 0.22, duration: 0.5, stagger: 1.15 }, 0.35)
+    .from('.services-item.absolute h3', { yPercent: 20, autoAlpha: 0, duration: 0.5, stagger: 1.15 }, 0.35)
+    .from('.services-item.absolute .paragraph', { yPercent: 20, autoAlpha: 0, duration:0.5, stagger: 1.15 }, 0.40)
+    .from('.services-item.absolute .img-wrap', { yPercent: 20, autoAlpha: 0, duration: 0.5, stagger: 1.15 }, 0.45)
 })
 
 /**
